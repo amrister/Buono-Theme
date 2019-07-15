@@ -1,3 +1,4 @@
+/* ------------------------------------ Start Montserrat ------------------------------*/
 @font-face {
     font-family: 'Montserrat';
     src: url('montserrat/montserrat-light-webfont.woff2') format('woff2'),
@@ -94,3 +95,13 @@
     font-style: italic;
 
 }
+/* ------------------------------------ End Montserrat ------------------------------*/
+/* ------------------------------------ Start Lemon ------------------------------*/
+@font-face {
+    font-family: 'Lemon';
+    src: url('lemon/lemon_jelly_personal_use-webfont.woff2') format('woff2'),
+         url('lemon/lemon_jelly_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ------------------------------------ End Lemon ------------------------------*/

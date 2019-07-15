@@ -16,8 +16,9 @@ function buono_enqueue_files(){
   wp_enqueue_script('popper', get_template_directory_uri().'/js/popper.min.js', array('jquery'), '6.5.1', true);
   wp_enqueue_script('main', get_template_directory_uri().'/js/main.js', array(), '1.0.0', true);
 
-  // Fonts
+  // Fonts & icons
   wp_enqueue_style('font-face', get_template_directory_uri().'/fonts/font-face.css', array(), false, 'all');
+  wp_enqueue_style('buono-icons', get_template_directory_uri().'/icons/buono-icons.css', array(), false, 'all');
 
 }
 add_action('wp_enqueue_scripts','buono_enqueue_files');

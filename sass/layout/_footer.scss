@@ -1,0 +1,20 @@
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $main-gray;
+  color: #fff;
+  padding: 50px 0 30px;
+  .conclusion{
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+  span{
+    color: $main-yellow;
+    display: block;
+    font-size: 88px;
+    margin-bottom: 20px;
+  }
+}

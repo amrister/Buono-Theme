@@ -3,9 +3,10 @@
 @package Buono-Theme
   This is template is for Header of pages
 */
+  global $nonav;
 ?>
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
   <head>
     <title><?php bloginfo('name');?></title>
     <meta charset="<?php wp_title('|');bloginfo('charset'); ?>" >
@@ -14,4 +15,4 @@
     <meta name="description" content="<?php bloginfo('description');?>">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+  <body <?php body_class('template-page'); ?>>

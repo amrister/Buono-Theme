@@ -1,11 +1,17 @@
 <?php
 /*
 @package Sunset-theme
-  This is The Template For Header
+  Template Name: Blog page template
+  This is The Template Index Page
 */
+
   get_header();
+  get_template_part('template-parts/navbar');
 ?>
-
-  <h1>Hey This is Buono</h1>
-
-<?php get_footer(); ?>
+  <div class="page-content">
+    
+  </div>
+<?php
+  get_template_part('template-parts/tail');
+  get_footer();
+?>

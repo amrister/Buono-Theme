@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Buono-icon';
+  src:  url('fonts/Buono-icon.eot?5p0pps');
+  src:  url('fonts/Buono-icon.eot?5p0pps#iefix') format('embedded-opentype'),
+    url('fonts/Buono-icon.ttf?5p0pps') format('truetype'),
+    url('fonts/Buono-icon.woff?5p0pps') format('woff'),
+    url('fonts/Buono-icon.svg?5p0pps#Buono-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.buono-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Buono-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.buono-logo:before {
+  content: "\e900";
+}
