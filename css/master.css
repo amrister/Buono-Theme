@@ -4,7 +4,6 @@
 /* --------------------------- Start Global ---------------------------------*/
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 2000px;
   position: relative; }
 
 h1 {
@@ -13,6 +12,16 @@ h1 {
 a:hover,
 a:focus {
   text-decoration: none; }
+
+section {
+  padding: 80px 0 30px; }
+  section .section-head h2 {
+    color: #202020;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    font-size: 2.5em;
+    margin-bottom: 20px; }
 
 /* --------------------------- End Global ---------------------------------*/
 /* --------------------------- Start Framework ---------------------------------*/
@@ -50,10 +59,44 @@ a:focus {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 220ms ease-in-out;
+  transition: all 220ms ease-in-out; }
 
 .main-yellow {
   color: #ffe005; }
+
+.description {
+  font-size: 18px;
+  letter-spacing: -0.01px;
+  color: #6a6a6a;
+  margin: 0; }
+
+.image img {
+  width: 100%; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.social-icon {
+  margin-top: 20px;
+  text-align: center; }
+  .social-icon li {
+    display: inline-block; }
+    .social-icon li a {
+      color: #202020;
+      display: block;
+      margin: 0 6px;
+      background-color: #fff;
+      border-radius: 3px;
+      -webkit-transition: all 220ms ease-in-out;
+      transition: all 220ms ease-in-out; }
+      .social-icon li a span {
+        display: block;
+        padding: 10px; }
+      .social-icon li a:hover {
+        color: #fff;
+        background-color: #202020; }
 
 /* --------------------------- Start Framework ---------------------------------*/
 .navbar {
@@ -62,6 +105,7 @@ a:focus {
   padding-left: 30px;
   padding-right: 50px;
   background-color: #fff;
+  z-index: 99;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   .navbar .navbar-brand {
@@ -69,6 +113,8 @@ a:focus {
   .navbar .navbar-nav .nav-link {
     padding: 0;
     position: relative; }
+    .navbar .navbar-nav .nav-link:hover {
+      color: #202020; }
     .navbar .navbar-nav .nav-link:not(.dropdown-toggle)::after {
       content: "";
       position: absolute;
@@ -95,25 +141,6 @@ a:focus {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
 
-.back-shape {
-  width: 100%;
-  height: 80vh;
-  margin: auto;
-  background-image: linear-gradient(to right, #11998e, #38ef7d);
-  border-bottom-right-radius: 200px; }
-
-.banner h1 {
-  margin-top: -15px;
-  margin-bottom: 10px; }
-  .banner h1 span {
-    color: #ffe005; }
-.banner .text {
-  padding-left: 50px; }
-  .banner .text p {
-    color: #fff;
-    font-size: 28px;
-    font-weight: 300; }
-
 .home .navbar {
   background-color: transparent;
   box-shadow: none; }
@@ -122,12 +149,16 @@ a:focus {
     color: #fff; }
   .home .navbar .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.8); }
+    .home .navbar .navbar-nav .nav-link:hover {
+      color: #fff; }
   .home .navbar .navbar-nav li.active .nav-link {
     color: #fff; }
   .home .navbar.scroll {
     background-color: #fff; }
     .home .navbar.scroll .navbar-nav .nav-link {
       color: rgba(32, 32, 32, 0.6); }
+      .home .navbar.scroll .navbar-nav .nav-link:hover {
+        color: #202020; }
     .home .navbar.scroll .navbar-nav li.active .nav-link {
       color: #202020; }
     .home .navbar.scroll .navbar-brand {
@@ -136,17 +167,14 @@ a:focus {
       font-size: 26px; }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: #202020;
   color: #fff;
-  padding: 50px 0 30px; }
+  padding: 50px 0 0px; }
   .footer .conclusion {
-    font-weight: 300;
     text-transform: capitalize;
-    letter-spacing: 2px; }
+    background-color: #1d1d1d;
+    margin: 0;
+    padding: 12px 0 8px; }
   .footer span {
     color: #ffe005;
     display: block;
@@ -290,5 +318,128 @@ a:focus {
   margin-bottom: 7px; }
 
 /*----------------------------- End Acess---------------------------------*/
+.back-shape {
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+  background-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-bottom-right-radius: 200px; }
+
+.home {
+  height: 2000px; }
+  .home .banner {
+    position: relative; }
+    .home .banner h1 {
+      margin-top: -15px;
+      margin-bottom: 10px; }
+      .home .banner h1 span {
+        color: #ffe005; }
+    .home .banner .text {
+      padding-left: 50px; }
+      .home .banner .text p {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300; }
+    .home .banner .svg-shape {
+      position: absolute;
+      top: 100px;
+      right: 150px; }
+      .home .banner .svg-shape img {
+        width: 300px; }
+
+.testimonials .testi-items {
+  margin-top: 10px; }
+  .testimonials .testi-items .testi-item {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+    padding: 50px 0 40px; }
+    .testimonials .testi-items .testi-item .image {
+      width: 250px;
+      flex-shrink: 0;
+      margin-right: 30px;
+      border: 1px solid rgba(238, 238, 238, 0.6);
+      padding: 5px; }
+    .testimonials .testi-items .testi-item .text {
+      position: relative;
+      padding: 40px 0px 0 80px; }
+      .testimonials .testi-items .testi-item .text h5 {
+        font-weight: 600;
+        color: #525252;
+        margin-bottom: 18px; }
+      .testimonials .testi-items .testi-item .text p {
+        color: #8c8c8c; }
+      .testimonials .testi-items .testi-item .text .quote {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ddd;
+        opacity: 0.5;
+        font-size: 50px; }
+      .testimonials .testi-items .testi-item .text .rate {
+        margin-top: 20px; }
+        .testimonials .testi-items .testi-item .text .rate span {
+          color: #ffe005; }
+    .testimonials .testi-items .testi-item.right .image {
+      order: 1;
+      margin-left: 30px;
+      margin-right: 0; }
+    .testimonials .testi-items .testi-item.right .text {
+      padding: 40px 80px 0 0; }
+      .testimonials .testi-items .testi-item.right .text .quote {
+        left: auto;
+        right: 20px; }
+
+.team .team-members {
+  margin-top: 55px; }
+  .team .team-members .row {
+    padding: 0px; }
+    .team .team-members .row > div {
+      margin: 1px; }
+      .team .team-members .row > div:first-of-type {
+        margin-left: 0px; }
+      .team .team-members .row > div:last-of-type {
+        margin-right: 0; }
+  .team .team-members .team-member {
+    position: relative;
+    overflow: hidden; }
+    .team .team-members .team-member .img {
+      -webkit-transition: width 220ms ease-in-out;
+      transition: width 220ms ease-in-out; }
+    .team .team-members .team-member:hover .overlay {
+      background-color: rgba(0, 0, 0, 0.8); }
+    .team .team-members .team-member:hover .img {
+      width: 102%; }
+    .team .team-members .team-member .text {
+      color: #fff;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      -webkit-transition: transform 220ms ease-in-out;
+      transition: transform 220ms ease-in-out;
+      -webkit-transform: translateY(calc(100% + 32px));
+      transform: translateY(calc(100% + 32px)); }
+      .team .team-members .team-member .text .mem-name, .team .team-members .team-member .text .mem-postion {
+        padding-left: 20px; }
+      .team .team-members .team-member .text .mem-name {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 32px;
+        margin-bottom: 25px;
+        padding-right: 100px; }
+        .team .team-members .team-member .text .mem-name::before {
+          content: "";
+          width: 50px;
+          height: 2px;
+          background-color: #fff;
+          margin-bottom: 30px;
+          display: block; }
+      .team .team-members .team-member .text .mem-postion {
+        padding-right: 50px;
+        color: #e1e1e1;
+        margin-bottom: 30px; }
+    .team .team-members .team-member:hover .text {
+      -webkit-transform: translateY(0);
+      transform: translateY(0); }
 
 /*# sourceMappingURL=master.css.map */

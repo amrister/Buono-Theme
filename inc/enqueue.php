@@ -18,6 +18,7 @@ function buono_enqueue_files(){
 
   // Fonts & icons
   wp_enqueue_style('font-face', get_template_directory_uri().'/fonts/font-face.css', array(), false, 'all');
+  wp_enqueue_style('lato-font', 'https://fonts.googleapis.com/css?family=Lato:700&display=swap', array(), false, 'all');
   wp_enqueue_style('buono-icons', get_template_directory_uri().'/icons/buono-icons.css', array(), false, 'all');
 
 }

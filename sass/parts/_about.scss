@@ -1,0 +1,126 @@
+.testimonials{
+  .testi-items{
+    margin-top: 10px;
+    .testi-item{
+      @include border(1px,bottom);
+      padding: 50px 0 40px;
+      .image{
+        width: 250px;
+        flex-shrink: 0;
+        margin-right: 30px;
+        @include border(1px,all);
+        padding: 5px;
+      }
+      .text{
+        position: relative;
+        padding: 40px 0px 0 80px;
+        h5{
+          font-weight: 600;
+          color: $main-tGray;
+          margin-bottom: 18px;
+        }
+        p{
+          color: $main-llGray;
+        }
+        .quote{
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #ddd;
+          opacity: 0.5;
+          font-size: 50px;
+        }
+        .rate{
+          margin-top: 20px;
+          span{
+            color: $main-yellow;
+          }
+        }
+      }
+      &.right{
+        .image{
+          order: 1;
+          margin-left: 30px;
+          margin-right: 0;
+        }
+        .text{
+          padding: 40px 80px 0 0;
+          .quote{
+            left: auto;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.team{
+  .team-members{
+    margin-top: 55px;
+    .row{
+      padding: 0px;
+      &>div{
+        margin: 1px;
+        &:first-of-type{
+          margin-left: 0px;
+        }
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+    .team-member{
+      position: relative;
+      overflow: hidden;
+      .img{
+        @include animate(width,220ms);
+      }
+      &:hover{
+        .overlay{
+          background-color: rgba(#000,0.8);
+        }
+        .img{
+          width: 102%;
+        }
+      }
+      .text{
+        color: #fff;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        @include animate(transform,220ms);
+        @include trans(translateY(calc(100% + 32px)));
+        .mem-name,.mem-postion{
+          padding-left: 20px;
+        }
+        .mem-name{
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          line-height: 32px;
+          margin-bottom: 25px;
+          padding-right: 100px;
+          &::before{
+            content: "";
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
+            margin-bottom: 30px;
+            display: block;
+          }
+        }
+        .mem-postion{
+          padding-right: 50px;
+          color: #e1e1e1;
+          margin-bottom: 30px;
+        }
+      }
+      &:hover{
+        .text{
+          @include trans(translateY(0));
+        }
+      }
+    }
+  }
+}

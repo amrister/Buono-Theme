@@ -3,7 +3,8 @@
 @package Buono-Theme
   This is template is for Header of pages
 */
-  global $nonav;
+  $slug = basename(get_permalink());
+  $class = 'page-'.$slug;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -15,4 +16,4 @@
     <meta name="description" content="<?php bloginfo('description');?>">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class('template-page'); ?>>
+  <body <?php body_class(array('template-page',$class)); ?>>

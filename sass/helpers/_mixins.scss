@@ -6,3 +6,17 @@
   -webkit-transform: #{$value};
   transform: #{$value};
 }
+@mixin circleIt($value) {
+  width: #{$value};
+  height: #{$value};
+  border-radius: 50%;
+  overflow: hidden;
+}
+@mixin border($value,$place) {
+  @if ( $place == 'all') {
+    border: #{$value} solid rgba(#eee,0.6);
+  }
+  @else{
+    border-#{$place}: #{$value} solid rgba(#eee,0.6);
+  }
+}

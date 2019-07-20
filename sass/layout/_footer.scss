@@ -1,15 +1,16 @@
 .footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: $main-gray;
   color: #fff;
-  padding: 50px 0 30px;
+  padding: 50px 0 0px;
   .conclusion{
-    font-weight: 300;
+    // font-weight: 300;
+    // letter-spacing: 1px;
     text-transform: capitalize;
-    letter-spacing: 2px;
+    background-color: #1d1d1d;
+    margin: 0;
+    padding: 12px 0 8px;
+  }
+  .tail{
   }
   span{
     color: $main-yellow;

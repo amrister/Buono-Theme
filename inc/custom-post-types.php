@@ -204,6 +204,10 @@
   function buono_custom_meta_boxes(){
     add_meta_box( 'buono_res_meta', __('Responsibility'), 'buono_res_meta_box_callback', 'buono-team', 'normal','high');
     add_meta_box( 'buono_bio_meta', __('Bio'), 'buono_bio_meta_box_callback', 'buono-team', 'normal','high');
+    add_meta_box( 'buono_facebook', __('Facebook'), 'buono_facebook_meta_box_callback', 'buono-team', 'normal', 'default');
+    add_meta_box( 'buono_twitter', __('Twitter'), 'buono_twitter_meta_box_callback', 'buono-team', 'normal', 'default');
+    add_meta_box( 'buono_instagram', __('Instagram'), 'buono_instagram_meta_box_callback', 'buono-team', 'normal', 'default');
+    add_meta_box( 'buono_github', __('GitHub'), 'buono_github_meta_box_callback', 'buono-team', 'normal', 'default');
     add_meta_box( 'buono_rate', __('Rating'), 'buono_rate_meta_box_callback','buono-testimonials', 'side');
   }
 
@@ -226,8 +230,36 @@
     wp_nonce_field( 'buono_rate_save_meta', 'buono_rate_meta_nonce');
     $rate_value = get_post_meta($post->ID,'_buono_rate_meta',true);
     echo '<label class="screen-reader-text" for="buono_rate_meta_field">Responsibility</label>';
-    echo '<input type="number" style="width:100%;margin:10px 0 5px;" name="buono_rate_meta_field" id="buono_rate_meta_field" value="'.$rate_value.'" min="0" max="10">';
-    echo '<p class="description">The postion of this person in your company.</p>';
+    echo '<input type="number" style="width:100%;margin:10px 0 5px;" name="buono_rate_meta_field" id="buono_rate_meta_field" value="'.$rate_value.'" min="0" max="10" required>';
+    echo '<p class="description">Enter rate number between 0 and 10</p>';
+  }
+  function buono_facebook_meta_box_callback($post){
+    wp_nonce_field( 'buono_facebook_save_meta', 'buono_facebook_meta_nonce');
+    $facebook_meta_value = get_post_meta( $post->ID, '_buono_facebook_meta', true);
+    echo '<label class="screen-reader-text" for="buono_facebook_meta_field">Facebook</label>';
+    echo '<input type="text" style="width:100%;margin:10px 0 5px;" name="buono_facebook_meta_field" id="buono_facebook_meta_field" value="'.$facebook_meta_value.'">';
+    echo '<p class="description">Enter member\'s Facebook profile url</p>';
+  }
+  function buono_twitter_meta_box_callback($post){
+    wp_nonce_field( 'buono_twitter_save_meta', 'buono_twitter_meta_nonce');
+    $twitter_meta_value = get_post_meta( $post->ID, '_buono_twitter_meta', true);
+    echo '<label class="screen-reader-text" for="buono_twitter_meta_field">Twitter</label>';
+    echo '<input type="text" style="width:100%;margin:10px 0 5px;" name="buono_twitter_meta_field" id="buono_twitter_meta_field" value="'.$twitter_meta_value.'">';
+    echo '<p class="description">Enter member\'s Twitter profile url</p>';
+  }
+  function buono_instagram_meta_box_callback($post){
+    wp_nonce_field( 'buono_instagram_save_meta', 'buono_instagram_meta_nonce');
+    $instagram_meta_value = get_post_meta( $post->ID, '_buono_instagram_meta', true);
+    echo '<label class="screen-reader-text" for="buono_instagram_meta_field">Instagram</label>';
+    echo '<input type="text" style="width:100%;margin:10px 0 5px;" name="buono_instagram_meta_field" id="buono_instagram_meta_field" value="'.$instagram_meta_value.'">';
+    echo '<p class="description">Enter member\'s Instagram profile url</p>';
+  }
+  function buono_github_meta_box_callback($post){
+    wp_nonce_field( 'buono_github_save_meta', 'buono_github_meta_nonce');
+    $github_meta_value = get_post_meta( $post->ID, '_buono_github_meta', true);
+    echo '<label class="screen-reader-text" for="buono_github_meta_field">Github</label>';
+    echo '<input type="text" style="width:100%;margin:10px 0 5px;" name="buono_github_meta_field" id="buono_github_meta_field" value="'.$github_meta_value.'">';
+    echo '<p class="description">Enter member\'s Github profile url</p>';
   }
 
   // Saving Process
@@ -291,3 +323,83 @@
     update_post_meta( $post_id, '_buono_rate_meta', $meta_data);
   }
   add_action( 'save_post', 'buono_rate_save_meta' );
+  function buono_facebook_save_meta($post_id){
+    if( !isset($_POST['buono_facebook_meta_nonce'])){
+      return;
+    }
+    if( !wp_verify_nonce( $_POST['buono_facebook_meta_nonce'], 'buono_facebook_save_meta') ){
+      return;
+    }
+    if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+      return;
+    }
+    if( !current_user_can( 'edit_post', $post_id)){
+      return;
+    }
+    if( !isset( $_POST['buono_facebook_meta_field'] ) ){
+      return;
+    }
+    $meta_data = sanitize_text_field( $_POST['buono_facebook_meta_field'] );
+    update_post_meta( $post_id, '_buono_facebook_meta', $meta_data);
+  }
+  add_action( 'save_post', 'buono_facebook_save_meta' );
+  function buono_twitter_save_meta($post_id){
+    if( !isset($_POST['buono_twitter_meta_nonce'])){
+      return;
+    }
+    if( !wp_verify_nonce( $_POST['buono_twitter_meta_nonce'], 'buono_twitter_save_meta') ){
+      return;
+    }
+    if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+      return;
+    }
+    if( !current_user_can( 'edit_post', $post_id)){
+      return;
+    }
+    if( !isset( $_POST['buono_twitter_meta_field'] ) ){
+      return;
+    }
+    $meta_data = sanitize_text_field( $_POST['buono_twitter_meta_field'] );
+    update_post_meta( $post_id, '_buono_twitter_meta', $meta_data);
+  }
+  add_action( 'save_post', 'buono_twitter_save_meta' );
+  function buono_instagram_save_meta($post_id){
+    if( !isset($_POST['buono_instagram_meta_nonce'])){
+      return;
+    }
+    if( !wp_verify_nonce( $_POST['buono_instagram_meta_nonce'], 'buono_instagram_save_meta') ){
+      return;
+    }
+    if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+      return;
+    }
+    if( !current_user_can( 'edit_post', $post_id)){
+      return;
+    }
+    if( !isset( $_POST['buono_instagram_meta_field'] ) ){
+      return;
+    }
+    $meta_data = sanitize_text_field( $_POST['buono_instagram_meta_field'] );
+    update_post_meta( $post_id, '_buono_instagram_meta', $meta_data);
+  }
+  add_action( 'save_post', 'buono_instagram_save_meta' );
+  function buono_github_save_meta($post_id){
+    if( !isset($_POST['buono_github_meta_nonce'])){
+      return;
+    }
+    if( !wp_verify_nonce( $_POST['buono_github_meta_nonce'], 'buono_github_save_meta') ){
+      return;
+    }
+    if( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+      return;
+    }
+    if( !current_user_can( 'edit_post', $post_id)){
+      return;
+    }
+    if( !isset( $_POST['buono_github_meta_field'] ) ){
+      return;
+    }
+    $meta_data = sanitize_text_field( $_POST['buono_github_meta_field'] );
+    update_post_meta( $post_id, '_buono_github_meta', $meta_data);
+  }
+  add_action( 'save_post', 'buono_github_save_meta' );
