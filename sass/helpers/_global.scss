@@ -106,4 +106,46 @@ section{
     }
   }
 }
+.get-up-hover{
+  position: relative;
+  overflow: hidden;
+  .text{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    @include animate(transform,220ms);
+    @include trans(translateY(calc(100% + 32px)));
+    .mem-name,.mem-postion{
+      padding-left: 20px;
+    }
+    .mem-name{
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      line-height: 32px;
+      margin-bottom: 25px;
+      padding-right: 100px;
+      &::before{
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 30px;
+        display: block;
+      }
+    }
+    .mem-postion{
+      padding-right: 50px;
+      color: #e1e1e1;
+      margin-bottom: 30px;
+    }
+  }
+  &:hover{
+    .text{
+      @include trans(translateY(0));
+    }
+  }
+}
 /* --------------------------- Start Framework ---------------------------------*/

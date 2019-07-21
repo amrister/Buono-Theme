@@ -8,3 +8,9 @@ $main-llGray:  #8c8c8c;
 %box-shadow{
   box-shadow: 0 -5px 10px 2px #ccc;
 }
+%cover{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
