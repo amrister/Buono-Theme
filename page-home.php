@@ -338,6 +338,55 @@
       </section>
       <!-- End Testimonials -->
 
+      <!-- Start Features -->
+      <section class="features" data-section="Features">
+        <div class="container">
+          <div class="section-head text-center">
+            <h2>Our Features</h2>
+            <p class="description">See what things you get when you use Buono</p>
+          </div>
+          <div class="content-box">
+            <div class="row">
+              <div class="col-4">
+                <div class="feat text-center">
+
+                  <div class="feat-icon">
+                    <img src="<?php echo get_template_directory_uri()?>/icons/speed.svg" alt="">
+                  </div>
+                  <div class="feat-text">
+                    <h3 class="feat-heading">Speed-optimized</h3>
+                    <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="feat text-center">
+                  <div class="feat-icon">
+                    <img src="<?php echo get_template_directory_uri()?>/icons/sliders.svg" alt="">
+                  </div>
+                  <div class="feat-text">
+                    <h3 class="feat-heading">Compatible</h3>
+                    <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="feat text-center">
+                  <div class="feat-icon">
+                    <img src="<?php echo get_template_directory_uri()?>/icons/database.svg" alt="" style="width:54px;">
+                  </div>
+                  <div class="feat-text">
+                    <h3 class="feat-heading">Optimization</h3>
+                    <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Features -->
+
       <!-- Start Subscribe -->
       <section class="subscribe" data-section="subscribe">
         <div class="container">

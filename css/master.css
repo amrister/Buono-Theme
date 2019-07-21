@@ -212,7 +212,8 @@ section {
 .footer {
   background-color: #202020;
   color: #fff;
-  padding: 50px 0 0px; }
+  padding: 50px 0 0px;
+  height: 100vh; }
   .footer .conclusion {
     text-transform: capitalize;
     background-color: #1d1d1d;
@@ -543,5 +544,24 @@ section {
         position: absolute;
         top: 10px;
         left: 10px; }
+  .home .features {
+    padding: 100px 0;
+    background-color: #FAFAFA; }
+    .home .features .content-box {
+      margin-top: 80px; }
+      .home .features .content-box .feat {
+        background-color: #fff;
+        padding: 50px 35px;
+        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+        margin: 0 30px; }
+        .home .features .content-box .feat .feat-icon {
+          margin-bottom: 55px; }
+        .home .features .content-box .feat .feat-heading {
+          font-size: 24px;
+          color: #202020;
+          margin-bottom: 30px; }
+        .home .features .content-box .feat .feat-desc {
+          margin-top: 0;
+          color: #8c8c8c; }
 
 /*# sourceMappingURL=master.css.map */
