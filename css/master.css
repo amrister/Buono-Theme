@@ -1,7 +1,10 @@
 .navbar, .home .navbar.scroll {
   box-shadow: 0 -5px 10px 2px #ccc; }
 
-.home .banner {
+.sidebar-nav, .home .features .content-box .feat {
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2); }
+
+.footer, .home .banner {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -210,20 +213,129 @@ section {
       font-size: 26px; }
 
 .footer {
-  background-color: #202020;
-  color: #fff;
-  padding: 50px 0 0px;
-  height: 100vh; }
+  padding: 0;
+  background: url("../images/footer-back.jpg") center top no-repeat fixed;
+  color: #fff; }
+  .footer .footer-back {
+    padding: 90px 0 0px;
+    background-color: rgba(32, 32, 32, 0.95); }
+  .footer .site-logo span {
+    color: #ffe005;
+    font-size: 71px; }
+  .footer .links {
+    margin-top: 70px; }
+    .footer .links h5 {
+      margin-bottom: 55px; }
+    .footer .links li a {
+      color: #d1d1d1; }
+    .footer .links .pages li a {
+      padding: 8px 0;
+      display: inline-block;
+      -webkit-transition: transform 220ms ease-in-out;
+      transition: transform 220ms ease-in-out; }
+      .footer .links .pages li a:hover {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px); }
+    .footer .links .schedule li {
+      color: #AAAAAA;
+      padding: 8px 0; }
+      .footer .links .schedule li span {
+        color: #fff;
+        font-weight: 600; }
+    .footer .links .schedule .email {
+      margin-top: 30px; }
+      .footer .links .schedule .email h6 {
+        font-weight: 600; }
+      .footer .links .schedule .email p {
+        color: #aaa; }
+    .footer .links .instagram .row > div {
+      padding: 0 10px; }
+    .footer .links .instagram .image {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px 0 #111;
+      margin: 10px 0; }
+      .footer .links .instagram .image .overlay {
+        background-color: rgba(0, 0, 0, 0.05); }
+        .footer .links .instagram .image .overlay .link {
+          -webkit-transition: all 320ms ease-in-out;
+          transition: all 320ms ease-in-out;
+          display: none;
+          line-height: 75px;
+          text-align: center; }
+          .footer .links .instagram .image .overlay .link img {
+            width: 50%; }
+        .footer .links .instagram .image .overlay:hover {
+          background-color: rgba(0, 0, 0, 0.8); }
+          .footer .links .instagram .image .overlay:hover .link {
+            display: block;
+            cursor: pointer; }
+    .footer .links .social-icon {
+      margin-bottom: 30px; }
+      .footer .links .social-icon li a {
+        color: #fff;
+        background-color: transparent; }
+        .footer .links .social-icon li a span {
+          font-size: 20px; }
+        .footer .links .social-icon li a:hover {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px); }
   .footer .conclusion {
     text-transform: capitalize;
     background-color: #1d1d1d;
     margin: 0;
     padding: 12px 0 8px; }
-  .footer span {
-    color: #ffe005;
-    display: block;
-    font-size: 88px;
-    margin-bottom: 20px; }
+
+.sidebar-nav {
+  width: auto;
+  position: fixed;
+  top: 28%;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  border-radius: 17px 0 0 17px;
+  -webkit-transition: all 220ms ease-in-out;
+  transition: all 220ms ease-in-out;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%); }
+  .sidebar-nav.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  .sidebar-nav ul {
+    margin: 0; }
+    .sidebar-nav ul li {
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+      -webkit-transition: all 220ms ease-in-out;
+      transition: all 220ms ease-in-out;
+      cursor: pointer; }
+      .sidebar-nav ul li.active {
+        background-color: #525252;
+        color: #fff; }
+        .sidebar-nav ul li.active:hover {
+          background-color: #525252; }
+      .sidebar-nav ul li:hover {
+        background-color: #f1f1f1; }
+      .sidebar-nav ul li:first-of-type {
+        border-radius: 15px 0  0 0; }
+      .sidebar-nav ul li:last-of-type {
+        border-radius: 0 0  0 15px;
+        border-bottom: 0; }
+  .sidebar-nav .icon {
+    position: absolute;
+    top: 45%;
+    color: #fff;
+    text-align: center;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    cursor: pointer; }
 
 /*----------------------------- Start Access ---------------------------------*/
 .access {
@@ -393,11 +505,23 @@ section {
       right: 150px; }
       .home .banner .svg-shape img {
         width: 300px; }
+  .home .down-arrow {
+    padding: 50px 0; }
+    .home .down-arrow img {
+      width: 30px;
+      animation-name: upDown;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      cursor: pointer; }
   .home .testimonials .testi-items {
     margin-top: 10px; }
     .home .testimonials .testi-items .testi-item {
-      border-bottom: 1px solid rgba(238, 238, 238, 0.6);
-      padding: 50px 0 40px; }
+      padding: 50px 0 40px;
+      border-bottom: 1px solid rgba(238, 238, 238, 0.6); }
+      .home .testimonials .testi-items .testi-item:last-of-type {
+        border-bottom: 0px solid rgba(238, 238, 238, 0.6); }
       .home .testimonials .testi-items .testi-item .image {
         width: 250px;
         flex-shrink: 0;
@@ -450,49 +574,51 @@ section {
       background-color: rgba(0, 0, 0, 0.8); }
     .home .team .team-members .team-member:hover .img {
       width: 102%; }
-  .home .about-us .upper-text {
-    padding: 100px 194px; }
-    .home .about-us .upper-text > p {
-      font-family: 'cinzel', sans-serif;
-      font-size: 122px;
-      line-height: 135px;
-      font-weight: 700;
-      color: #202020; }
-    .home .about-us .upper-text .quote {
-      display: flex;
-      justify-content: space-between; }
-      .home .about-us .upper-text .quote > span {
-        display: block;
-        width: 278px;
-        height: 2px;
-        background-color: #525252;
-        flex-shrink: 0; }
-      .home .about-us .upper-text .quote p {
-        position: relative;
-        top: -9px;
-        margin-left: 55px;
-        display: block;
+  .home .about-us {
+    padding-top: 0; }
+    .home .about-us .upper-text {
+      padding: 100px 194px; }
+      .home .about-us .upper-text > p {
+        font-family: 'cinzel', sans-serif;
+        font-size: 122px;
+        line-height: 135px;
+        font-weight: 700;
+        color: #202020; }
+      .home .about-us .upper-text .quote {
+        display: flex;
+        justify-content: space-between; }
+        .home .about-us .upper-text .quote > span {
+          display: block;
+          width: 278px;
+          height: 2px;
+          background-color: #525252;
+          flex-shrink: 0; }
+        .home .about-us .upper-text .quote p {
+          position: relative;
+          top: -9px;
+          margin-left: 55px;
+          display: block;
+          font-size: 18px;
+          color: #525252; }
+          .home .about-us .upper-text .quote p span {
+            font-weight: 600; }
+    .home .about-us .text-image .black-box {
+      margin-top: 75px;
+      background-color: #333333;
+      padding: 50px;
+      position: relative;
+      left: -100px; }
+      .home .about-us .text-image .black-box h3 {
+        color: #ffe005;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 20px;
+        margin-bottom: 0; }
+      .home .about-us .text-image .black-box p {
         font-size: 18px;
-        color: #525252; }
-        .home .about-us .upper-text .quote p span {
-          font-weight: 600; }
-  .home .about-us .text-image .black-box {
-    margin-top: 75px;
-    background-color: #333333;
-    padding: 50px;
-    position: relative;
-    left: -100px; }
-    .home .about-us .text-image .black-box h3 {
-      color: #ffe005;
-      font-weight: 600;
-      font-style: italic;
-      font-size: 26px;
-      margin-bottom: 0; }
-    .home .about-us .text-image .black-box p {
-      font-size: 18px;
-      color: #ccc;
-      margin-top: 30px;
-      margin-bottom: 0; }
+        color: #ccc;
+        margin-top: 30px;
+        margin-bottom: 0; }
   .home .places {
     padding-bottom: 0; }
     .home .places .get-up-hover .mem-postion {
@@ -552,7 +678,6 @@ section {
       .home .features .content-box .feat {
         background-color: #fff;
         padding: 50px 35px;
-        box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
         margin: 0 30px; }
         .home .features .content-box .feat .feat-icon {
           margin-bottom: 55px; }
@@ -563,5 +688,16 @@ section {
         .home .features .content-box .feat .feat-desc {
           margin-top: 0;
           color: #8c8c8c; }
+
+@keyframes upDown {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); } }
 
 /*# sourceMappingURL=master.css.map */

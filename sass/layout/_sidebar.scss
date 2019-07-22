@@ -1,0 +1,56 @@
+.sidebar-nav{
+  width: auto;
+  position: fixed;
+  top: 28%;
+  right:0;
+  background-color: #fff;
+  z-index: 999;
+  border-radius: 17px 0 0 17px;
+  @extend %shadow;
+  @include animate(all,220ms);
+  @include trans(translateX(100%));
+  &.active{
+    @include trans(translateX(0));
+  }
+  ul {
+    margin: 0;
+    li{
+      padding: 20px 10px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      overflow: hidden;
+      @include border(1px,bottom);
+      @include animate(all,220ms);
+      cursor: pointer;
+      &.active{
+        background-color: $main-tGray;
+        color: #fff;
+        &:hover{
+          background-color: $main-tGray;
+        }
+      }
+      &:hover{
+        background-color: #f1f1f1;
+      }
+      &:first-of-type{
+        border-radius: 15px 0  0 0;
+      }
+      &:last-of-type{
+        border-radius: 0 0  0 15px;
+        border-bottom: 0;
+      }
+    }
+  }
+  .icon{
+    position: absolute;
+    top: 45%;
+    color: #fff;
+    text-align: center;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    cursor: pointer;
+  }
+}

@@ -38,12 +38,27 @@
       }
     }
   }
+  .down-arrow{
+    padding: 50px 0 ;
+    img{
+      width:30px;
+      animation-name: upDown;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;;
+      animation-iteration-count: infinite;
+      cursor: pointer;
+    }
+  }
   .testimonials{
     .testi-items{
       margin-top: 10px;
       .testi-item{
-        @include border(1px,bottom);
         padding: 50px 0 40px;
+        @include border(1px,bottom);
+        &:last-of-type{
+          @include border(0px,bottom);
+        }
         .image{
           width: 250px;
           flex-shrink: 0;
@@ -125,6 +140,7 @@
     }
   }
   .about-us{
+    padding-top: 0;
     .upper-text{
       padding: 100px 194px;
       &>p{
@@ -168,7 +184,7 @@
           color: $main-yellow;
           font-weight: 600;
           font-style: italic;
-          font-size: 26px;
+          font-size: 20px;
           margin-bottom: 0;
         }
         p{
@@ -258,7 +274,7 @@
       .feat{
         background-color: #fff;
         padding: 50px 35px;
-        box-shadow: 0 1px 7px 0 rgba(#000,0.2);
+        @extend %shadow;
         margin: 0 30px;
         .feat-icon{
           margin-bottom: 55px;
@@ -274,5 +290,18 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes upDown {
+  0%{
+    @include trans(translateY(0px));
+  }
+  50%{
+    @include trans(translateY(-10px));
+  }
+  100%{
+    @include trans(translateY(0px));
   }
 }

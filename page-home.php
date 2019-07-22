@@ -10,8 +10,25 @@
   <div class="page-content">
     <?php if(is_front_page()): ?>
 
+      <!-- Start Sidebar -->
+      <aside class="sidebar-nav">
+        <ul class="list-unstyled">
+          <li id="top" data-section="top" class="active">Top</li>
+          <li id="about-us" data-section="about-us">About us</li>
+          <li id="team" data-section="team">Team</li>
+          <li id="testimonials" data-section="testimonials">Testimonials</li>
+          <li id="features" data-section="features">Features</li>
+          <li id="places" data-section="places">Places</li>
+          <li id="bottom" data-section="bottom">bottom</li>
+        </ul>
+        <div class="icon js-activeSideBar" data-sidebar="sidebar-nav" data-class="active">
+          <
+        </div>
+      </aside>
+      <!-- End Sidebar -->
+
       <!-- Start Banner -->
-      <header class="banner" data-section="Top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/headerBack.jpg)">
+      <header class="banner top" data-section="top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/headerBack.jpg)">
         <div class="back-shape">
           <div class="container table">
             <div class="text table-cell">
@@ -27,13 +44,13 @@
       <!-- End Banner -->
 
       <!-- Start Down Arrow -->
-      <div class="arrows">
-
+      <div class="down-arrow text-center">
+        <img src="<?php echo get_template_directory_uri()?>/icons/arrow.svg" class="js-goDown" alt="">
       </div>
       <!-- End Down Arrow -->
 
       <!-- Start About Us -->
-      <section class="about-us" data-section="About Us">
+      <section class="about-us" data-section="about-us">
         <div class="container">
           <div class="upper-text">
             <p>A Better Client Experience</p>
@@ -64,7 +81,7 @@
       <!-- End About Us -->
 
       <!-- Start Team  -->
-      <section class="team" data-section="Team">
+      <section class="team" data-section="team">
         <div class="section-head text-center">
           <h2>Team Members</h2>
           <p class="description">Our team members are our greatest asset.</p>
@@ -291,7 +308,7 @@
       <!-- End Team -->
 
       <!-- Start Testimonials -->
-      <section class="testimonials" data-section="Testimonials">
+      <section class="testimonials" data-section="testimonials">
         <div class="container">
           <div class="section-head text-center">
             <h2>Testimonials</h2>
@@ -339,7 +356,7 @@
       <!-- End Testimonials -->
 
       <!-- Start Features -->
-      <section class="features" data-section="Features">
+      <section class="features" data-section="features">
         <div class="container">
           <div class="section-head text-center">
             <h2>Our Features</h2>
@@ -406,7 +423,7 @@
       <!-- End Subscribe -->
 
       <!-- Start Places-->
-      <section class="places" data-section="Places">
+      <section class="places" data-section="places">
         <div class="container-fluid">
           <div class="row">
             <div class="col-4 no-padding">
