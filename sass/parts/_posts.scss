@@ -1,0 +1,119 @@
+.site-posts{
+  .site-post{
+    background-color: #fff;
+    .image{
+      overflow: hidden;
+      position: relative;
+      .overlay{
+        background-color: rgba(#000,0.2);
+      }
+    }
+    .text{
+      .post-heading{
+        font-weight: 600;
+        padding:15px 0 10px;
+        color: $main-fgray;
+        margin-bottom: 0
+      }
+      .post-desc{
+        p{
+          color: $main-llGray;
+          font-size: 14px;
+        }
+      }
+      a{
+        font-size: 14px;
+      }
+    }
+  }
+  &.display{
+    .site-post{
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid rgba(#ccc,0.4);
+      &:last-of-type{
+        border-bottom: 0;
+      }
+      .image{
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        width: 170px;
+        a{
+          display: block;
+          height: 100%;
+          width: 100%;
+          background-position: 50% 50%;
+          background-size: cover;
+          background-origin:border-box;
+        }
+      }
+      .text{
+        padding-right: 50px;
+        .post-heading{
+          font-size: 24px;
+        }
+        .post-date{
+          h6{
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: $main-llGray;
+            margin-bottom: 15px;
+            i{
+              margin: 0 10px;
+              position: relative;
+              top: -2px;
+            }
+            a{
+              font-size: 12px;
+              color: $main-llGray;
+              font-weight: 600;
+              &:hover{
+                color: $main-gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.search{
+    .site-post{
+      background-color: #fff;
+      margin-bottom: 30px;
+      .image{
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        .overlay{
+          background-color: rgba(#000,0.2);
+        }
+      }
+      .text{
+        padding: 0 15px 15px;
+        .post-heading{
+          font-size: 16px;
+          font-weight: 600;
+          padding:15px 0 10px;
+          color: $main-fgray;
+        }
+        .post-desc{
+          height: 45px;
+          p{
+            color: $main-llGray;
+            font-size: 14px;
+          }
+        }
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

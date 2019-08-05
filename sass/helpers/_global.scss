@@ -23,8 +23,20 @@ section{
     }
   }
 }
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 /* --------------------------- End Global ---------------------------------*/
 /* --------------------------- Start Framework ---------------------------------*/
+.dot{
+  width: 5px;
+  height: 5px;
+  background-color: $main-tGray;
+  border-radius: 50%;
+  display: inline-block;
+}
 .template-page:not(.home){
   .page-content{
     padding-top: 100px;
@@ -146,6 +158,18 @@ section{
     .text{
       @include trans(translateY(0));
     }
+  }
+}
+.page-head{
+  padding: 60px 0 100px;
+  h1{
+    font-family: 'lato';
+    font-weight: 500;
+    color: $main-fgray;
+    padding-left: 30px;
+    border-left: 4px solid $main-yellow;
+    font-size: 32px;
+    font-weight: 700;
   }
 }
 /* --------------------------- Start Framework ---------------------------------*/

@@ -9,3 +9,5 @@
   require get_template_directory().'/inc/walker.php';
   require get_template_directory().'/inc/custom-post-types.php';
   require get_template_directory().'/inc/custom-funcitons.php';
+  require get_template_directory().'/inc/widgets.php';
+  require get_template_directory().'/inc/cleanup.php';

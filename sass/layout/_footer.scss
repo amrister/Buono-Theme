@@ -58,10 +58,10 @@
       }
       .image{
         position: relative;
-        border-radius: 10px;
+        // border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 0 10px 0 #111;
         margin: 10px 0;
+        border: 1px solid rgba(#ccc,0.2);
         .overlay{
           background-color: rgba(#000,0.05);
           .link{
@@ -103,7 +103,8 @@
     text-transform: capitalize;
     background-color: #1d1d1d;
     margin: 0;
-    padding: 12px 0 8px;
+    padding: 16px 0 12px;
+    font-size: 14px;
   }
   .tail{
   }

@@ -22,7 +22,24 @@ $(document).ready(function(){
   $(window).on('scroll',function(){
     sidebar_checker();
   });
+  $('.sidebar-nav li').on('click',function(){
+    if($(this).hasClass('active')){
+      return;
+    }
+    let curSection = $(this).data('section');
+    let secOffset = $('.' + curSection).offset().top - 45;
+    $('html,body').animate({
+        scrollTop : secOffset,
+    },800);
+  })
 
+
+
+
+
+
+
+  
   /* ---------------------------- Functions ----------------------------*/
 
   // Function To Add Scroll to navbar
@@ -38,22 +55,13 @@ $(document).ready(function(){
   // Function To Add Active Class to sidebar
   function sidebar_checker(){
     $('section,header').each(function(){
-      let scrollTop = $(window).scrollTop() + 1;
+      let scrollTop = $(window).scrollTop() + 46;
       if( scrollTop >= $(this).offset().top){
         let curSection = $(this).data('section');
         $('#'+curSection).addClass('active').siblings().removeClass('active');
       }
     })
   }
-
-  // Function to go to certain section
-  $('.sidebar-nav li').on('click',function(){
-    let curSection = $(this).data('section');
-    let secOffset = $('.' + curSection).offset().top;
-    $('html,body').animate({
-        scrollTop : secOffset,
-    },800);
-  })
 
 
 });

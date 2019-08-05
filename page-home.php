@@ -11,24 +11,11 @@
     <?php if(is_front_page()): ?>
 
       <!-- Start Sidebar -->
-      <aside class="sidebar-nav">
-        <ul class="list-unstyled">
-          <li id="top" data-section="top" class="active">Top</li>
-          <li id="about-us" data-section="about-us">About us</li>
-          <li id="team" data-section="team">Team</li>
-          <li id="testimonials" data-section="testimonials">Testimonials</li>
-          <li id="features" data-section="features">Features</li>
-          <li id="places" data-section="places">Places</li>
-          <li id="bottom" data-section="bottom">bottom</li>
-        </ul>
-        <div class="icon js-activeSideBar" data-sidebar="sidebar-nav" data-class="active">
-          <
-        </div>
-      </aside>
+      <?php get_sidebar('home'); ?>
       <!-- End Sidebar -->
 
       <!-- Start Banner -->
-      <header class="banner top" data-section="top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/headerBack.jpg)">
+      <header class="banner top" data-section="top" style="background-image:url(<?php echo get_header_image()?>)">
         <div class="back-shape">
           <div class="container table">
             <div class="text table-cell">

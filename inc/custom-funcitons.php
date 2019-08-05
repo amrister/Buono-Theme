@@ -26,3 +26,43 @@ function buono_get_testi_rate($num){
   }
   echo '</div>';
 }
+/*
+  ===========================================
+  Edit Excerpt Length
+  ===========================================
+*/
+  function buono_edit_excerpt_length($len){
+    return 18;
+  }
+  add_filter('excerpt_length','buono_edit_excerpt_length',999);
+
+  function buono_edit_excerpt_more($more){
+    return '...';
+  }
+  add_filter('excerpt_more','buono_edit_excerpt_more');
+
+/*
+  ===========================================
+  Get Post Date Ready
+  ===========================================
+*/
+  function buono_get_post_meta($type = null){
+    $content = '';
+    if( $type == 'date'){
+      $content = '<h6><span>'.human_time_diff( get_the_time('U'), current_time('timestamp')).'</span></h6>';
+    }else if ( $type == 'cats'){
+      $content = '<h6>'.get_the_category_list( $separator = ' - ').'</h6>';
+    }else if ( $type == null){
+      $content = '<h6><span>'.human_time_diff( get_the_time('U'), current_time('timestamp')).'</span><i class="dot"></i>'.get_the_category_list( $separator = ' - ').'</h6>';
+    }
+    return $content;
+  }
+
+/*
+  ===========================================
+  Get Post Footer Ready
+  ===========================================
+*/
+  function buono_get_post_footer(){
+    
+  }

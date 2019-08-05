@@ -13,6 +13,8 @@
     .nav-link{
       padding: 0;
       position: relative;
+      font-size: 14px;
+      font-weight: 500;
       &:hover{
         color: $main-gray;
       }
