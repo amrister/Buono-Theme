@@ -3,6 +3,7 @@
   background: url('../images/footer-back.jpg') center top no-repeat fixed;
   @extend %cover;
   color: #fff;
+  margin-top: 100px;
   .footer-back{
     padding: 90px 0 0px;
     background-color: rgba($main-gray,0.95);
@@ -61,7 +62,7 @@
         // border-radius: 10px;
         overflow: hidden;
         margin: 10px 0;
-        border: 1px solid rgba(#ccc,0.2);
+        border: 1px solid rgba(255,255,255,0.4);
         .overlay{
           background-color: rgba(#000,0.05);
           .link{
@@ -109,4 +110,7 @@
   .tail{
   }
 
+}
+.home .footer{
+  margin-top: 0px;
 }

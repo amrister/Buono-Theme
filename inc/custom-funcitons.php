@@ -64,5 +64,9 @@ function buono_get_testi_rate($num){
   ===========================================
 */
   function buono_get_post_footer(){
-    
+    $content = '<div class="tags">';
+    $content .= '<img class="icon" src="'.get_template_directory_uri().'/icons/tag.svg" alt="">';
+    $content .= get_the_tag_list( $before = '', $sep = ' - ', $after = '', $id = 0 );
+    $content .= '</div>';
+    return $content;
   }

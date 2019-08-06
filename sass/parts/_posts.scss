@@ -1,40 +1,42 @@
 .site-posts{
-  .site-post{
-    background-color: #fff;
-    .image{
-      overflow: hidden;
-      position: relative;
-      .overlay{
-        background-color: rgba(#000,0.2);
-      }
-    }
-    .text{
-      .post-heading{
-        font-weight: 600;
-        padding:15px 0 10px;
-        color: $main-fgray;
-        margin-bottom: 0
-      }
-      .post-desc{
-        p{
-          color: $main-llGray;
-          font-size: 14px;
-        }
-      }
-      a{
-        font-size: 14px;
-      }
-    }
-  }
+  // .site-post{
+  //   background-color: #fff;
+  //   .image{
+  //     overflow: hidden;
+  //     position: relative;
+  //     .overlay{
+  //       background-color: rgba(#000,0.2);
+  //     }
+  //   }
+  //   .text{
+  //     .post-heading{
+  //       font-weight: 600;
+  //       padding:15px 0 10px;
+  //       color: $main-fgray;
+  //       margin-bottom: 0
+  //     }
+  //     .post-desc{
+  //       p{
+  //         color: $main-llGray;
+  //         font-size: 14px;
+  //       }
+  //     }
+  //     a{
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
   &.display{
     .site-post{
-      -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding-bottom: 50px;
+      display: block;
+      .post-body{
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
       margin-bottom: 50px;
       border-bottom: 1px solid rgba(#ccc,0.4);
       &:last-of-type{
@@ -79,6 +81,34 @@
               }
             }
           }
+        }
+        .post-desc{
+          p{
+            color: $main-llGray;
+            font-size: 14px;
+          }
+        }
+        .read-more{
+          font-size: 14px;
+          font-weight: 600;
+          color: $main-llGray;
+        }
+      }
+      .post-footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10px 10px 0;
+        .icon{
+          position: relative;
+          top: -2px;
+          width: 20px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        a{
+          color: $main-llGray;
+          font-size: 12px;
+          font-weight: 600;
         }
       }
     }

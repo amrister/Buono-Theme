@@ -1,0 +1,21 @@
+.pagination{
+  &.blog-pagination{
+    margin-top: 80px;
+    .page-numbers{
+      width: 28px;
+      height: 35px;
+      display: inline-block;
+      border: 1px solid rgba(#ccc,0.4);
+      margin: 0 5px;
+      color: $main-gray;
+      text-align: center;
+      line-height: 35px;
+      font-weight: 600;
+      &.current{
+        border-color: $main-gray;
+        background-color: $main-gray;
+        color: #fff;
+      }
+    }
+  }
+}
